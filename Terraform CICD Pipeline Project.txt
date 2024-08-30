@@ -1,0 +1,27 @@
+Terraform CICD Pipeline Creating Infrastructure
+at AWS
+==============================
+Step 1 :- Write Code for VPC, Subnet, Security Group and AWS 
+Instance.
+Step 2:- Set the Remote Backend at S3 bucket and DynamoDB Table
+for State Locking. 
+Step 3:- Create a Pipeline in Gitlab
+Step 4:- Run the pipeline. 
+
+Commands Used in the code:
+ terraform init
+ terraform fmt
+ terraform plan
+terraform apply -auto-approve
+terraform destroy -auto-approve
+
+Integration of Git with Terraform AND AWS:
+ git init
+ git remote add origin https://gitlab.com/devops_projects8385928/cicd-terraform-project.git
+git remote -v
+git checkout -b dev
+git add .
+git config --global user.email "you@example.com"
+ git config --global user.name "Your Name"
+git commit -m "Initial Commit"
+ git push -u origin dev
